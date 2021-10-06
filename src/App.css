@@ -206,9 +206,9 @@ input[type="checkbox"]:checked:after{
   -webkit-appearance: none; */
 
   /* content: "ON"; */
-  content:  url('logo.svg') ;
-  font-size: 18px;
+  content:  url('checkedy.svg') ;
+  font-size: 1px;
   /* display: none; */
-  background-color:white
+  background-color:rgb(30, 211, 24)
 
 }

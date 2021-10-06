@@ -50,7 +50,7 @@ function CardComponent({heading,image,content,idx,deleteItem,CardUpdator}) {
               //  console.log(modal) 
              setModal(true)}}  href="">  <i className="far fa-edit fa-2x" ></i></a>
            
-             <a  style={{color:"#39FF14",textDecoration:"none"}}href="https://www.google.com"> <input type="checkbox" checked={checkState} onChange={(e)=>{setCheckState((prevState)=>!prevState)}}/></a>
+           <input type="checkbox" checked={checkState} onChange={(e)=>{setCheckState((prevState)=>!prevState)}}/>
              {/* <h1 style={{fontSize:"20px"}}> Click Me !</h1> */}
              <a onClick={handleDelete} href=""> <i className="fas fa-trash-alt fa-2x"></i></a>
             
