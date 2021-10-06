@@ -64,7 +64,7 @@ console.log("2")
          <div className="header text-center">
             <h1 className="" style={{color:"aqua"}}>React Todo-List</h1>
             <button className="btn btn-primary mt-2"  onClick={()=>setModal(!modal)}>Create Task</button>
-            <h1 className="profile">Developed with 💘 by Sriram Krishnamurthy and Ranjani</h1>
+            <h1 className="profile">Developed with 💘 by Sriram Krishnamurthy </h1>
         </div>  
         {/* ---------------------- SECTION-2--------------------------- */}
         <div style={{height:"100vh",backgroundColor:"#212121"}}>       
