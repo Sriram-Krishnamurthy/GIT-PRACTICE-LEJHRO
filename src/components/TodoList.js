@@ -43,6 +43,14 @@ export function TodoList() {
         window.location.reload()
      
  }
+ const checker=(index,shouldCheck)=>{
+     let Tempolist=tasklist
+     Tempolist[index].checked1=shouldCheck
+     localStorage.setItem("tasks",JSON.stringify(Tempolist))
+     setTaskList(Tempolist)
+    //  window.location.reload()
+
+ }
 
     const addTask=(currentTask)=>{
       let k =0;
@@ -71,7 +79,7 @@ console.log("2")
          <div className ="task-container">
        
                 {tasklist.map((elm,idx)=>{
-           return (<CardComponent heading={elm.heading} image={elm.image} idx={idx} content={elm.content} deleteItem={deleteItem} CardUpdator={CardUpdator}/>)
+           return (<CardComponent heading={elm.heading} checker={checker} image={elm.image} idx={idx} checked1={elm.checked1} content={elm.content} deleteItem={deleteItem} CardUpdator={CardUpdator}/>)
         })}
         
  <CreateTask toggle={toggle} modal={modal} addTask={addTask} tasklist={tasklist}/>

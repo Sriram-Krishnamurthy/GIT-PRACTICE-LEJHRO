@@ -8,8 +8,8 @@ import {
 
   
 
-function CardComponent({heading,image,content,idx,deleteItem,CardUpdator}) { 
-   const [checkState,setCheckState]=useState(true);
+function CardComponent({heading,image,content,idx,deleteItem,CardUpdator,checker,checked1}) { 
+   const [checkState,setCheckState]=useState(checked1);
     const [modal, setModal] = useState(false);  
      const toggle = () => setModal(!modal);
   function updateTask(state1){
@@ -22,6 +22,7 @@ function CardComponent({heading,image,content,idx,deleteItem,CardUpdator}) {
     useEffect(() => {
       let  y = `${image}`
         setImage(y)
+
     }, [])
  
    const handleDelete=()=>{
@@ -50,7 +51,10 @@ function CardComponent({heading,image,content,idx,deleteItem,CardUpdator}) {
               //  console.log(modal) 
              setModal(true)}}  href="">  <i className="far fa-edit fa-2x" ></i></a>
            
-           <input type="checkbox" checked={checkState} onChange={(e)=>{setCheckState((prevState)=>!prevState)}}/>
+           <input type="checkbox" checked={checkState} onChange={(e)=>{  checker(idx,!checkState)
+           setCheckState((prevState)=>!prevState)
+         
+           }}/>
              {/* <h1 style={{fontSize:"20px"}}> Click Me !</h1> */}
              <a onClick={handleDelete} href=""> <i className="fas fa-trash-alt fa-2x"></i></a>
             

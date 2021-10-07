@@ -11,7 +11,7 @@ return[state,(e)=>{
 }
 export const CreateTask = ({modal,toggle,addTask,tasklist}) => {
 console.log(tasklist)
-const[state,StateHandler]=useFormData({heading:"",image:"",content:""})
+const[state,StateHandler]=useFormData({heading:"",image:"",content:"",checked1:false})
 
 
   return (
